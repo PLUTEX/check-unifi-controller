@@ -493,7 +493,7 @@ def _convert_unifi_counters_if(section: Section) -> interfaces.Section:
     return [ 
         unifi_interface(
             index=str(netif.port_idx),
-            descr=netif.name,
+            descr=str(netif.port_idx),
             alias=netif.name,
             type='6',
             speed=_safe_int(netif.speed)*1000000,
